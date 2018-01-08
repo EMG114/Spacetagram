@@ -9,7 +9,20 @@
 import UIKit
 
 class SignInViewController: UIViewController {
+    
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    
+    @IBOutlet weak var signInButton: UIButton!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBOutlet weak var forgotButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +35,12 @@ class SignInViewController: UIViewController {
     }
     
 
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        
+        print("sign in")
+    }
+    
+    
     /*
     // MARK: - Navigation
 

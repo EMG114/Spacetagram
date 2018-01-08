@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07153B99200172CB008F92BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153B98200172CB008F92BC /* AppDelegate.swift */; };
-		07153B9B200172CB008F92BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07153B9A200172CB008F92BC /* ViewController.swift */; };
 		07153B9E200172CB008F92BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07153B9C200172CB008F92BC /* Main.storyboard */; };
 		07153BA0200172CB008F92BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07153B9F200172CB008F92BC /* Assets.xcassets */; };
 		07153BA3200172CB008F92BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07153BA1200172CB008F92BC /* LaunchScreen.storyboard */; };
@@ -25,12 +24,15 @@
 		071C9F622001BA090020F32D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071C9F612001BA090020F32D /* Bolts.framework */; };
 		071C9F642001C2360020F32D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071C9F632001C2360020F32D /* Parse.framework */; };
 		071C9F662001C6F50020F32D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C9F652001C6F50020F32D /* Constants.swift */; };
+		07AE31A32002F74100FCFE10 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A22002F74100FCFE10 /* SignInViewController.swift */; };
+		07AE31A52002F75C00FCFE10 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */; };
+		07AE31A72002F79E00FCFE10 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A62002F79E00FCFE10 /* ResetPasswordViewController.swift */; };
+		07AE31A92003092700FCFE10 /* person-placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07AE31A82003092700FCFE10 /* person-placeholder.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07153B95200172CB008F92BC /* Spacetagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spacetagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07153B98200172CB008F92BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07153B9A200172CB008F92BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07153B9D200172CB008F92BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07153B9F200172CB008F92BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07153BA2200172CB008F92BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,10 @@
 		071C9F612001BA090020F32D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		071C9F632001C2360020F32D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Bolts.framework/Headers/Parse.framework; sourceTree = "<group>"; };
 		071C9F652001C6F50020F32D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		07AE31A22002F74100FCFE10 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
+		07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		07AE31A62002F79E00FCFE10 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		07AE31A82003092700FCFE10 /* person-placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "person-placeholder.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +99,14 @@
 		07153B97200172CB008F92BC /* Spacetagram */ = {
 			isa = PBXGroup;
 			children = (
+				07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */,
+				07AE31A62002F79E00FCFE10 /* ResetPasswordViewController.swift */,
+				07AE31A22002F74100FCFE10 /* SignInViewController.swift */,
 				07153B98200172CB008F92BC /* AppDelegate.swift */,
 				071C9F652001C6F50020F32D /* Constants.swift */,
-				07153B9A200172CB008F92BC /* ViewController.swift */,
 				07153B9C200172CB008F92BC /* Main.storyboard */,
 				07153B9F200172CB008F92BC /* Assets.xcassets */,
+				07AE31A82003092700FCFE10 /* person-placeholder.jpg */,
 				07153BA1200172CB008F92BC /* LaunchScreen.storyboard */,
 				07153BA4200172CB008F92BC /* Info.plist */,
 			);
@@ -183,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07AE31A92003092700FCFE10 /* person-placeholder.jpg in Resources */,
 				07153BA3200172CB008F92BC /* LaunchScreen.storyboard in Resources */,
 				07153BA0200172CB008F92BC /* Assets.xcassets in Resources */,
 				07153B9E200172CB008F92BC /* Main.storyboard in Resources */,
@@ -196,9 +206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07153B9B200172CB008F92BC /* ViewController.swift in Sources */,
 				07153B99200172CB008F92BC /* AppDelegate.swift in Sources */,
 				071C9F662001C6F50020F32D /* Constants.swift in Sources */,
+				07AE31A72002F79E00FCFE10 /* ResetPasswordViewController.swift in Sources */,
+				07AE31A52002F75C00FCFE10 /* SignUpViewController.swift in Sources */,
+				07AE31A32002F74100FCFE10 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
