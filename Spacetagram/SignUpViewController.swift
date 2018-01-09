@@ -52,11 +52,11 @@ class SignUpViewController: UIViewController {
         scrollview.contentSize.height = self.view.frame.height
         scrollViewHeight = scrollview.frame.size.height
         
-        NotificationCenter.default.addObserver(self, selector: Selector(("showKeyboard:")), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
-         NotificationCenter.default.addObserver(self, selector: Selector(("hideKeyboard:")), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        let hideTap = UITapGestureRecognizer(target: self, action: Selector(("hideKeyboardTapped:")))
+        let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardTapped(recognizer:)))
         hideTap.numberOfTapsRequired = 1
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(hideTap)
