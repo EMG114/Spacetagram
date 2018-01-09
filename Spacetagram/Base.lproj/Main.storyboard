@@ -86,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person-placeholder.jpg" id="evv-gW-Gvu">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person-placeholder.jpg" id="evv-gW-Gvu">
                                         <rect key="frame" x="137" y="54" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -132,11 +132,45 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pUg-L5-CuM">
+                                        <rect key="frame" x="27" y="452" width="68" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.85050722590000005" blue="0.49598706469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="4mc-6N-TvG" eventType="touchUpInside" id="Jos-ZP-mu4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oBz-bk-cJ6">
+                                        <rect key="frame" x="282" y="451" width="68" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="4mc-6N-TvG" eventType="touchUpInside" id="Yoq-Lt-vrv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarImage" destination="evv-gW-Gvu" id="iDH-X9-Yrj"/>
+                        <outlet property="cancelButton" destination="oBz-bk-cJ6" id="mmQ-EV-kWF"/>
+                        <outlet property="descriptionTextField" destination="kcj-Wx-SlG" id="dLD-bi-AxJ"/>
+                        <outlet property="fullnameTextField" destination="Akw-Le-8aH" id="x3S-4m-1fS"/>
+                        <outlet property="passwordTextField" destination="fuf-V2-Yik" id="73g-hu-ZLi"/>
+                        <outlet property="repeatPassTextField" destination="jmI-Sd-fGD" id="sek-cl-rQA"/>
+                        <outlet property="scrollview" destination="oro-rv-gj9" id="19U-8S-4fD"/>
+                        <outlet property="signUpButton" destination="pUg-L5-CuM" id="dai-f7-hRT"/>
+                        <outlet property="usernameTextField" destination="abU-57-HgY" id="hTA-oJ-PCi"/>
+                        <outlet property="websiteTextField" destination="l0o-Ke-7tx" id="vra-HH-eM1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiO-dB-4Ka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
