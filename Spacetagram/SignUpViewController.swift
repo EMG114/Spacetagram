@@ -56,12 +56,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardTapped(recognizer:)))
+        let hideTap = UITapGestureRecognizer(target: self, action: Selector(("hideKeyboardTapped")))
         hideTap.numberOfTapsRequired = 1
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(hideTap)
         
-        let avatarTap = UITapGestureRecognizer(target: self, action: "loadImg:")
+        let avatarTap = UITapGestureRecognizer(target: self, action: Selector(("loadImg")))
         avatarTap.numberOfTapsRequired = 1
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(avatarTap)
