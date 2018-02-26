@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -130,6 +131,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
         }
+        
+        if passwordTextField.text != repeatPassTextField.text {
+            let alert = UIAlertController(title: "PASSWORD", message: "do not match", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel, handler:nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
