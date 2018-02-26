@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var scrollview: UIScrollView!
     
@@ -48,7 +48,7 @@ class SignUpViewController: UIViewController {
         
         
         //scrollview frame size
-        scrollview.frame = CGRect(0,0,self.view.frame.width, self.view.frame.width)
+        scrollview.frame = CGRect(0,0,self.view.frame.width, self.view.frame.height)
         scrollview.contentSize.height = self.view.frame.height
         scrollViewHeight = scrollview.frame.size.height
         
@@ -61,6 +61,26 @@ class SignUpViewController: UIViewController {
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(hideTap)
         
+        let avatarTap = UITapGestureRecognizer(target: self, action: "loadImg:")
+        avatarTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(avatarTap)
+    }
+    
+    func loadImg(recognizer:UITapGestureRecognizer) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    
+    
+    private func imagePickerControllerSet(picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[String : AnyObject]) {
+        
+        avatarImage.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    
     }
     
     func hideKeyboardTapped(recognizer:UITapGestureRecognizer) {
