@@ -139,7 +139,37 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.present(alert, animated: true, completion: nil)
         }
         
-    }
+        let user = PFUser()
+        user.username = usernameTextField.text?.lowercased()
+        user.email = emailTextField.text?.lowercased()
+        user.password = passwordTextField.text
+        user["fullname"] = fullnameTextField.text?.lowercased()
+        user["description"] = descriptionTextField.text
+        user["website"] = websiteTextField.text?.lowercased()
+        user["telephone"] = ""
+        user["gender"] = ""
+        
+        let avatarData = UIImageJPEGRepresentation(avatarImage.image!, 0.5)
+        let avatarFile = PFFile(name: "avatarImage.jpg", data: avatarData!)
+        user["avatarPhoto"] = avatarFile
+        user.signUpInBackground(block: ({ ( success:Bool, error: NSError) in
+            if success {
+                print("registered")
+            } else {
+                
+                print(error.localizedDescription)
+                
+            }
+            
+            
+            } as! PFBooleanResultBlock)
+          
+        
+    )}
+    
+  
+    
+    
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
