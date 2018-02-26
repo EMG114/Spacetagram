@@ -91,7 +91,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     
-    func showKeyboard(notification:NSNotification){
+    @objc func showKeyboard(notification:NSNotification){
         
         //define keyboard size
         keyboard = ((notification.userInfo?[UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue)!
@@ -104,7 +104,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     
-    func hideKeyboard(notification:NSNotification){
+    @objc func hideKeyboard(notification:NSNotification){
         
         UIView.animate(withDuration: 0.4) { () -> Void in
             self.scrollview.frame.size.height = self.view.frame.height
