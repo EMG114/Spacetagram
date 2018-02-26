@@ -81,7 +81,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
-    private func imagePickerControllerSet(picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[String : AnyObject]) {
+    @objc internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[String : Any]) {
         
         avatarImage.image = info[UIImagePickerControllerEditedImage] as? UIImage
         self.dismiss(animated: true, completion: nil)

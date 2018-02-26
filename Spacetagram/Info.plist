@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>&quot;Requesting access to Photo Library&quot;</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>&quot;Requesting usage of Photo Library&quot;</string>
+	<key>NSCameraUsageDescription</key>
+	<string>&quot;Requesting permission to Camera Usage&quot;</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
