@@ -152,20 +152,17 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let avatarData = UIImageJPEGRepresentation(avatarImage.image!, 0.5)
         let avatarFile = PFFile(name: "avatarImage.jpg", data: avatarData!)
         user["avatarPhoto"] = avatarFile
-        user.signUpInBackground(block: ({ ( success:Bool, error: NSError) in
+        user.signUpInBackground { (success, error) in
             if success {
                 print("registered")
-            } else {
-                
-                print(error.localizedDescription)
-                
+        } else {
+                print(error?.localizedDescription as Any)
             }
-            
-            
-            } as! PFBooleanResultBlock)
-          
+
+    }
         
-    )}
+        
+    }
     
   
     
