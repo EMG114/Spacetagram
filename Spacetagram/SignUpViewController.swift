@@ -56,18 +56,23 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        let hideTap = UITapGestureRecognizer(target: self, action: Selector(("hideKeyboardTapped")))
+        let hideTap = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboardTapped(recognizer:)))
         hideTap.numberOfTapsRequired = 1
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(hideTap)
+       
         
-        let avatarTap = UITapGestureRecognizer(target: self, action: Selector(("loadImg")))
+        avatarImage.layer.cornerRadius = avatarImage.frame.size.width / 2
+        avatarImage.clipsToBounds = true
+        
+        let avatarTap = UITapGestureRecognizer(target: self, action:#selector(self.loadImg(recognizer:)))
         avatarTap.numberOfTapsRequired = 1
-        self.view.isUserInteractionEnabled = true
-        self.view.addGestureRecognizer(avatarTap)
+        self.avatarImage.isUserInteractionEnabled = true
+        self.avatarImage.addGestureRecognizer(avatarTap)
+        
     }
     
-    func loadImg(recognizer:UITapGestureRecognizer) {
+    @objc func loadImg(recognizer:UITapGestureRecognizer) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .photoLibrary
@@ -83,15 +88,13 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     }
     
-    func hideKeyboardTapped(recognizer:UITapGestureRecognizer) {
+    @objc func hideKeyboardTapped(recognizer:UITapGestureRecognizer) {
         
         self.view.endEditing(true)
         
         }
     
-    
-    
-    @objc func showKeyboard(notification:NSNotification){
+   @objc func showKeyboard(notification:NSNotification){
         
         //define keyboard size
         keyboard = ((notification.userInfo?[UIKeyboardFrameEndUserInfoKey]! as AnyObject).cgRectValue)!
@@ -104,7 +107,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     
-    @objc func hideKeyboard(notification:NSNotification){
+  @objc func hideKeyboard(notification:NSNotification){
         
         UIView.animate(withDuration: 0.4) { () -> Void in
             self.scrollview.frame.size.height = self.view.frame.height

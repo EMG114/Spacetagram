@@ -24,6 +24,7 @@
 		071C9F622001BA090020F32D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071C9F612001BA090020F32D /* Bolts.framework */; };
 		071C9F642001C2360020F32D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071C9F632001C2360020F32D /* Parse.framework */; };
 		071C9F662001C6F50020F32D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C9F652001C6F50020F32D /* Constants.swift */; };
+		077D6E462044B01C00E07363 /* default-profile-picture-.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077D6E452044B01C00E07363 /* default-profile-picture-.jpg */; };
 		07AE31A32002F74100FCFE10 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A22002F74100FCFE10 /* SignInViewController.swift */; };
 		07AE31A52002F75C00FCFE10 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */; };
 		07AE31A72002F79E00FCFE10 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A62002F79E00FCFE10 /* ResetPasswordViewController.swift */; };
@@ -50,6 +51,7 @@
 		071C9F612001BA090020F32D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		071C9F632001C2360020F32D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Bolts.framework/Headers/Parse.framework; sourceTree = "<group>"; };
 		071C9F652001C6F50020F32D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		077D6E452044B01C00E07363 /* default-profile-picture-.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default-profile-picture-.jpg"; sourceTree = "<group>"; };
 		07AE31A22002F74100FCFE10 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
 		07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		07AE31A62002F79E00FCFE10 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				07153B9C200172CB008F92BC /* Main.storyboard */,
 				07153B9F200172CB008F92BC /* Assets.xcassets */,
 				07AE31A82003092700FCFE10 /* person-placeholder.jpg */,
+				077D6E452044B01C00E07363 /* default-profile-picture-.jpg */,
 				07153BA1200172CB008F92BC /* LaunchScreen.storyboard */,
 				07153BA4200172CB008F92BC /* Info.plist */,
 			);
@@ -197,6 +200,7 @@
 				07153BA3200172CB008F92BC /* LaunchScreen.storyboard in Resources */,
 				07153BA0200172CB008F92BC /* Assets.xcassets in Resources */,
 				07153B9E200172CB008F92BC /* Main.storyboard in Resources */,
+				077D6E462044B01C00E07363 /* default-profile-picture-.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
