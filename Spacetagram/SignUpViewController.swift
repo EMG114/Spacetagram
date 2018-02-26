@@ -21,6 +21,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var repeatPassTextField: UITextField!
     
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var fullnameTextField: UITextField!
     
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -121,7 +122,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
 
     @IBAction func signUpButtonPressed(_ sender: Any) {
-        print("sign up")
+        self.view.endEditing(true)
+        
+        if (usernameTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! || (repeatPassTextField.text?.isEmpty)! || (emailTextField.text?.isEmpty)! || (fullnameTextField.text?.isEmpty)! {
+            let alert = UIAlertController(title: "PLEASE", message: "Fill out ALL required fields", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel, handler:nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
