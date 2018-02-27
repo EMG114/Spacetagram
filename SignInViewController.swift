@@ -20,8 +20,15 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.endEditing(true)
 
-        // Do any additional setup after loading the view.
+        if (usernameTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Please", message: "Fill out all fields", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
