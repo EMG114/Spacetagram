@@ -12,25 +12,17 @@ import Parse
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var scrollview: UIScrollView!
-    
-
-    
     @IBOutlet weak var avatarImage: UIImageView!
+    
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var repeatPassTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var fullnameTextField: UITextField!
-    
     @IBOutlet weak var descriptionTextField: UITextField!
-    
     @IBOutlet weak var websiteTextField: UITextField!
     
     @IBOutlet weak var signUpButton: UIButton!
-    
     @IBOutlet weak var cancelButton: UIButton!
     
     
@@ -156,7 +148,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             if success {
                 print("registered")
                 
-                UserDefaults.standard.dictionary(forKey: "username")
+                UserDefaults.standard.set(user.username, forKey: "username")
                 UserDefaults.standard.synchronize()
                 
                 let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -171,11 +163,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    
   
     
     
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        // hide keyboard when pressed cancel
+        self.view.endEditing(true)
+        
         self.dismiss(animated: true, completion: nil)
     }
 

@@ -56,11 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func login() {
-        let userName: String? = UserDefaults.standard.string(forKey: "username")
+        let username: String? = UserDefaults.standard.string(forKey: "username")
         if username != nil {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let myTabBar = storyBoard.instantiateViewController(withIdentifier: "tabBar") as UITabBarController
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+            let myTabBar = storyBoard.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
             window?.rootViewController = myTabBar
+        
+            
         }
     }
 

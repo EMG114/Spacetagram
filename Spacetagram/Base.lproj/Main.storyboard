@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-96.5" y="182.5"/>
+            <point key="canvasLocation" x="-308" y="203"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Fdm-24-bjx">
@@ -198,21 +198,6 @@
             </objects>
             <point key="canvasLocation" x="755" y="203"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="jGJ-vg-khX">
-            <objects>
-                <viewController id="3Qk-Hx-oqx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9NL-VR-beY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="QWY-e2-4QZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dXh-6O-JXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1855" y="1068"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="p6u-AW-Ca3">
             <objects>
@@ -239,7 +224,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="LQr-cE-c5u" kind="relationship" relationship="viewControllers" id="aN0-WS-MXD"/>
-                        <segue destination="3Qk-Hx-oqx" kind="relationship" relationship="viewControllers" id="3re-FD-Sew"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFm-0D-15T" userLabel="First Responder" sceneMemberID="firstResponder"/>
