@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignInViewController: UIViewController {
     
@@ -21,14 +22,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.endEditing(true)
-
-        if (usernameTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Please", message: "Fill out all fields", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
-        }
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +33,21 @@ class SignInViewController: UIViewController {
 
     @IBAction func signInButtonPressed(_ sender: Any) {
         
-        print("sign in")
+        self.view.endEditing(true)
+        
+        if (usernameTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Please", message: "Fill out all fields", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) { (user, error) -> Void in
+        if error == nil {
+            UserDefaults.standard.set(user?.username, forKey: "username")
+            UserDefaults.standard.synchronize()
+        }
+        } 
     }
     
     
