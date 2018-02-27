@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -25,11 +26,29 @@ class ResetPasswordViewController: UIViewController {
     @IBAction func resetButtonClick(_ sender: Any) {
         
         self.view.endEditing(true)
-        if emailTextField.text?.isEmpty {
+        
+        if (emailTextField.text?.isEmpty)! {
+            
             let alert = UIAlertController(title: "Please", message: "enter your email", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
+        }
+        
+        PFUser.requestPasswordResetForEmail(inBackground: emailTextField.text!) { (success, error) in
+            if success {
+                
+                let alert = UIAlertController(title: "Request", message: "to change password received!", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: {(UIAlertAction) in
+                     self.dismiss(animated: true, completion: nil)
+                })
+               
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                print(error?.localizedDescription as Any)
+            }
+            
         }
         
     }
