@@ -11,7 +11,8 @@ import Parse
 
 class SignInViewController: UIViewController {
     
-
+    @IBOutlet weak var appLabel: UILabel!
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -21,6 +22,22 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appLabel.font = UIFont(name: "Pacifico", size: 25)
+        
+        appLabel.frame = CGRect(x: 10, y: 80, width: self.view.frame.size.width - 20, height: 50)
+        usernameTextField.frame = CGRect(x: 10, y: appLabel.frame.origin.y + 70, width: self.view.frame.size.width - 20, height: 30)
+        passwordTextField.frame = CGRect(x: 10, y: usernameTextField.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+        forgotButton.frame = CGRect(x: 10, y: passwordTextField.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
+        
+        signInButton.frame = CGRect(x: 20, y: forgotButton.frame.origin.y + 40, width: self.view.frame.size.width / 4, height: 30)
+        signInButton.layer.cornerRadius = signInButton.frame.size.width / 20
+        
+        signUpButton.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 4 - 20, y: signInButton.frame.origin.y, width: self.view.frame.size.width / 4, height: 30)
+        signUpButton.layer.cornerRadius = signUpButton.frame.size.width / 20
+        
+        
+        
         
     
     }
