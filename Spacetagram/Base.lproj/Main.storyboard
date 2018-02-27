@@ -209,16 +209,27 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetButtonClick:" destination="SXf-DR-rbN" eventType="touchUpInside" id="IUH-SE-iZO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H17-MA-QTc">
                                 <rect key="frame" x="292" y="225" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonClick:" destination="SXf-DR-rbN" eventType="touchUpInside" id="AAa-F2-fm7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="H17-MA-QTc" id="Dhb-Q0-kxS"/>
+                        <outlet property="emailTextField" destination="wes-fr-C6j" id="7Rc-rJ-dfj"/>
+                        <outlet property="resetButton" destination="SwK-lA-NKu" id="A7S-MP-wAj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAm-05-fzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

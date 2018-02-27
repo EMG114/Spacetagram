@@ -9,19 +9,36 @@
 import UIKit
 
 class ResetPasswordViewController: UIViewController {
-
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var resetButton: UIButton!
+    
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func resetButtonClick(_ sender: Any) {
+        
+        self.view.endEditing(true)
+        if emailTextField.text?.isEmpty {
+            let alert = UIAlertController(title: "Please", message: "enter your email", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
-
+    @IBAction func cancelButtonClick(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
