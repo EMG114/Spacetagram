@@ -46,6 +46,9 @@ class SignInViewController: UIViewController {
         if error == nil {
             UserDefaults.standard.set(user?.username, forKey: "username")
             UserDefaults.standard.synchronize()
+            
+            let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.login()
         }
         } 
     }
