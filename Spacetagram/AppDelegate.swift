@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -53,7 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func login() {
+        let userName: String? = UserDefaults.standard.string(forKey: "username")
+        if username != nil {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myTabBar = storyBoard.instantiateViewController(withIdentifier: "tabBar") as UITabBarController
+            window?.rootViewController = myTabBar
+        }
+    }
 
 }
 
