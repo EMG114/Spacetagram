@@ -64,6 +64,25 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.avatarImage.isUserInteractionEnabled = true
         self.avatarImage.addGestureRecognizer(avatarTap)
         
+        
+        // alignment
+        avatarImage.frame = CGRect(x: self.view.frame.size.width / 2 - 40, y: 40, width: 80, height: 80)
+        usernameTextField.frame = CGRect(x: 10, y: avatarImage.frame.origin.y + 90, width: self.view.frame.size.width - 20, height: 30)
+        passwordTextField.frame = CGRect(x: 10, y: usernameTextField.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+        repeatPassTextField.frame = CGRect(x: 10, y: passwordTextField.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+        emailTextField.frame = CGRect(x: 10, y: repeatPassTextField.frame.origin.y + 60, width: self.view.frame.size.width - 20, height: 30)
+        fullnameTextField.frame = CGRect(x: 10, y: emailTextField.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+        descriptionTextField.frame = CGRect(x: 10, y: fullnameTextField.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+        websiteTextField.frame = CGRect(x: 10, y: descriptionTextField.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
+        
+        signUpButton.frame = CGRect(x: 20, y: websiteTextField.frame.origin.y + 50, width: self.view.frame.size.width / 4, height: 30)
+        signUpButton.layer.cornerRadius = signUpButton.frame.size.width / 20
+        
+        cancelButton.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 4 - 20, y: signUpButton.frame.origin.y, width: self.view.frame.size.width / 4, height: 30)
+        cancelButton.layer.cornerRadius = cancelButton.frame.size.width / 20
+        
+        
+        
     }
     
     @objc func loadImg(recognizer:UITapGestureRecognizer) {
