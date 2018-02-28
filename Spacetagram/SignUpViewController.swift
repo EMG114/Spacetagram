@@ -81,7 +81,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         cancelButton.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 4 - 20, y: signUpButton.frame.origin.y, width: self.view.frame.size.width / 4, height: 30)
         cancelButton.layer.cornerRadius = cancelButton.frame.size.width / 20
         
-        
+        // background
+        let background = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        background.image = UIImage(named: "")
+        background.layer.zPosition = -1
+        self.view.addSubview(background)
         
     }
     
