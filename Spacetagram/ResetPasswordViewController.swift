@@ -19,8 +19,9 @@ class ResetPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.frame = CGRect()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func resetButtonClick(_ sender: Any) {
