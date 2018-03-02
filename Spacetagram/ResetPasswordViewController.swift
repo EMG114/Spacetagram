@@ -21,6 +21,8 @@ class ResetPasswordViewController: UIViewController {
         super.viewDidLoad()
         
         emailTextField.frame = CGRect()
+        
+        //this is where to code
 
     }
 
