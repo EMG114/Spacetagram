@@ -10,6 +10,8 @@ import UIKit
 import Parse
 
 class ResetPasswordViewController: UIViewController {
+    
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var resetButton: UIButton!
@@ -22,7 +24,7 @@ class ResetPasswordViewController: UIViewController {
         
         emailTextField.frame = CGRect()
         
-        _ = "this is where to code"
+      
 
     }
 
