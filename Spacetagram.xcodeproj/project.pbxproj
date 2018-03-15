@@ -27,6 +27,7 @@
 		0771DD01205ADD3700D07B62 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0771DD00205ADD3700D07B62 /* Pacifico.ttf */; };
 		0771DD03205AFCA200D07B62 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0771DD02205AFCA200D07B62 /* HomeCollectionViewController.swift */; };
 		0771DD05205AFCBC00D07B62 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0771DD04205AFCBC00D07B62 /* HeaderCollectionReusableView.swift */; };
+		0771DD07205B02CB00D07B62 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0771DD06205B02CB00D07B62 /* PictureCollectionViewCell.swift */; };
 		077D6E462044B01C00E07363 /* default-profile-picture-.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077D6E452044B01C00E07363 /* default-profile-picture-.jpg */; };
 		07AE31A32002F74100FCFE10 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A22002F74100FCFE10 /* SignInViewController.swift */; };
 		07AE31A52002F75C00FCFE10 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */; };
@@ -57,6 +58,7 @@
 		0771DD00205ADD3700D07B62 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		0771DD02205AFCA200D07B62 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		0771DD04205AFCBC00D07B62 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		0771DD06205B02CB00D07B62 /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		077D6E452044B01C00E07363 /* default-profile-picture-.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "default-profile-picture-.jpg"; sourceTree = "<group>"; };
 		07AE31A22002F74100FCFE10 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
 		07AE31A42002F75C00FCFE10 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				07153B98200172CB008F92BC /* AppDelegate.swift */,
 				071C9F652001C6F50020F32D /* Constants.swift */,
 				07153B9C200172CB008F92BC /* Main.storyboard */,
+				0771DD06205B02CB00D07B62 /* PictureCollectionViewCell.swift */,
 				0771DD02205AFCA200D07B62 /* HomeCollectionViewController.swift */,
 				0771DD04205AFCBC00D07B62 /* HeaderCollectionReusableView.swift */,
 				07153B9F200172CB008F92BC /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 				071C9F662001C6F50020F32D /* Constants.swift in Sources */,
 				07AE31A72002F79E00FCFE10 /* ResetPasswordViewController.swift in Sources */,
 				0771DD03205AFCA200D07B62 /* HomeCollectionViewController.swift in Sources */,
+				0771DD07205B02CB00D07B62 /* PictureCollectionViewCell.swift in Sources */,
 				07AE31A52002F75C00FCFE10 /* SignUpViewController.swift in Sources */,
 				07AE31A32002F74100FCFE10 /* SignInViewController.swift in Sources */,
 			);
