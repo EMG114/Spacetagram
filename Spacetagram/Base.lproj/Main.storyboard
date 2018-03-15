@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1256" y="695"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Home Collection View Controller-->
         <scene sceneID="EY3-wJ-geN">
             <objects>
-                <collectionViewController id="9Nz-It-2Ap" sceneMemberID="viewController">
+                <collectionViewController id="9Nz-It-2Ap" customClass="HomeCollectionViewController" customModule="Spacetagram" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="z9r-x4-E9l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +281,7 @@
                                 </view>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" id="Ug7-DO-mcq">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="Ug7-DO-mcq" customClass="HeaderCollectionReusableView" customModule="Spacetagram" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -363,6 +363,19 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <connections>
+                                <outlet property="avatarImage" destination="aCa-dw-o2f" id="o8B-mf-iyy"/>
+                                <outlet property="button" destination="EAa-Cu-Bej" id="Xex-dS-SSR"/>
+                                <outlet property="descriptionLabel" destination="Dhr-5c-PnD" id="fjQ-1g-MqS"/>
+                                <outlet property="followers" destination="c6M-L7-5l1" id="SF8-GC-jHn"/>
+                                <outlet property="followersTitle" destination="9di-rj-70z" id="inU-bq-b6V"/>
+                                <outlet property="following" destination="11Z-6N-BTD" id="yd8-In-aEm"/>
+                                <outlet property="followingTitle" destination="BLe-gH-LRA" id="SEp-Jd-iii"/>
+                                <outlet property="fullNameLabel" destination="PGN-kX-tFm" id="07c-CS-gg9"/>
+                                <outlet property="posts" destination="Zrl-Aq-6zJ" id="4yC-9X-GOM"/>
+                                <outlet property="postsTitle" destination="mzS-bE-uQC" id="9tM-vw-Mlk"/>
+                                <outlet property="websiteTextField" destination="kF5-J1-aIf" id="wEx-3L-dc7"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="9Nz-It-2Ap" id="pWg-Cv-Ybu"/>
@@ -372,7 +385,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pA-Vt-w4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068.5" y="592.5"/>
+            <point key="canvasLocation" x="1638" y="596"/>
         </scene>
     </scenes>
     <resources>
