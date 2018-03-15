@@ -167,6 +167,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let avatarData = UIImageJPEGRepresentation(avatarImage.image!, 0.5)
         let avatarFile = PFFile(name: "avatarImage.jpg", data: avatarData!)
         user["avatarPhoto"] = avatarFile
+        
         user.signUpInBackground { (success, error) in
             if success {
                 print("registered")
@@ -178,11 +179,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                 appDelegate.login()
                 
         } else {
-                print(error?.localizedDescription as Any)
+                    // show alert message
+                    let alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                    let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+                    alert.addAction(ok)
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
 
-    }
-        
         
     }
     
