@@ -37,16 +37,19 @@ class SignInViewController: UIViewController {
         signUpButton.layer.cornerRadius = signUpButton.frame.size.width / 20
         
         
-        
+        // tap to hide keyboard
+        let hideTap = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard(_:)))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
         
     
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // hide keyboard func
+    @objc func hideKeyboard(_ recognizer : UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
-    
 
     @IBAction func signInButtonPressed(_ sender: Any) {
         
