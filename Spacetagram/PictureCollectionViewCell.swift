@@ -12,5 +12,5 @@ class PictureCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pictureImage: UIImageView!
     
-    var image = ""
+   
 }
